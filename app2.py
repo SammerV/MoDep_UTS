@@ -61,6 +61,8 @@ def main():
             person_emp_exp = st.number_input('Employment Experience (years)', min_value=0, max_value=125, value=5)
             loan_amnt = st.number_input('Loan Amount', min_value=0, max_value=35000, value=9500)
             loan_int_rate = st.number_input('Interest Rate', min_value=5.42, max_value=20.00, value=11.00)
+            cb_person_cred_hist_length = st.number_input('Credit History Length (years)', min_value=2, max_value=30, value=6)
+            credit_score = st.number_input('Credit Score', min_value=390, max_value=850, value=630)
 
         with col2:
             person_gender = st.selectbox('Gender', ['female', 'male'])
@@ -72,8 +74,6 @@ def main():
                                      ['EDUCATION', 'MEDICAL', 'VENTURE', 'PERSONAL', 'DEBTCONSOLIDATION', 'HOMEIMPROVEMENT'])
             previous_loan_defaults = st.selectbox('Previous Loan Defaults', ['No', 'Yes'])
 
-        cb_person_cred_hist_length = st.slider('Credit History Length (years)', min_value=2, max_value=30, value=6)
-        credit_score = st.slider('Credit Score', min_value=390, max_value=850, value=630)
 
         submitted = st.form_submit_button("Predict Loan Status")
 
