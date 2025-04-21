@@ -56,13 +56,13 @@ def main():
         col1, col2 = st.columns(2)
 
         with col1:
-            person_age = st.number_input('Age (years)', min_value=20, max_value=144, value=28)
-            person_income = st.number_input('Annual Income', min_value=0, value=50000)
-            person_emp_exp = st.number_input('Employment Experience (years)', min_value=0, max_value=125, value=5)
-            loan_amnt = st.number_input('Loan Amount', min_value=0, max_value=35000, value=9500)
-            loan_int_rate = st.number_input('Interest Rate', min_value=5.42, max_value=20.00, value=11.00)
-            cb_person_cred_hist_length = st.number_input('Credit History Length (years)', min_value=2, max_value=30, value=6)
-            credit_score = st.number_input('Credit Score', min_value=390, max_value=850, value=630)
+            person_age = st.number_input('Age (years)', min_value=20, max_value=144)
+            person_income = st.number_input('Annual Income', min_value=0)
+            person_emp_exp = st.number_input('Employment Experience (years)', min_value=0, max_value=125)
+            loan_amnt = st.number_input('Loan Amount', min_value=0, max_value=35000)
+            loan_int_rate = st.number_input('Interest Rate', min_value=5.42, max_value=20.00)
+            cb_person_cred_hist_length = st.number_input('Credit History Length (years)', min_value=2, max_value=30)
+            credit_score = st.number_input('Credit Score', min_value=390, max_value=850)
 
         with col2:
             person_gender = st.selectbox('Gender', ['female', 'male'])
