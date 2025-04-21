@@ -33,11 +33,11 @@ def preprocess_input(input_data):
 
     # Encode categorical features
     input_df['person_gender'] = input_df['person_gender'].map(loaded_encoders['person_gender_encoder'])
-    input_df['person_education'] = input_df['person_education'].map(loaded_encoders['person_education_encoder'])
-    input_df['person_home_ownership'] = input_df['person_home_ownership'].map(loaded_encoders['person_home_ownership_encoder'])
+    input_df['person_education'] = input_df['person_education'].map(loaded_encoders['education_encoder'])
+    input_df['person_home_ownership'] = input_df['person_home_ownership'].map(loaded_encoders['home_ownership_encoder'])
     input_df['loan_intent'] = loaded_encoders['target_encoder'].transform(input_df[['loan_intent']])
     input_df['previous_loan_defaults_on_file'] = input_df['previous_loan_defaults_on_file'].map(
-        loaded_encoders['previous_loan_defaults_encoder'])
+        loaded_encoders['loan_defaults_encoder'])
 
     # Handle outliers
     for col, (low, high) in loaded_outlier_bounds.items():
