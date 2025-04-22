@@ -101,9 +101,9 @@ def main():
         # Show results
         st.subheader("Loan Status Result")
         if prediction[0] == 0:
-            st.success("Loan Approved (Status: 0)")
+            st.success("Loan Declined (Status: 0)")
         else:
-            st.error("Loan Declined (Status: 1)")
+            st.error("Loan Approved (Status: 1)")
 
 if __name__ == '__main__':
     main()
